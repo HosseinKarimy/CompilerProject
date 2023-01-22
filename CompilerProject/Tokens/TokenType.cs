@@ -1,9 +1,10 @@
 ﻿namespace CompilerProject.Tokens;
 
-public enum TypeToken
+public enum TokenType
 {
     Number,
     Keyword,
     Identifier,
-    Operator
+    Operator,
+    Error
 }

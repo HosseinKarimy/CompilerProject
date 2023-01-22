@@ -30,17 +30,23 @@
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.StartSplitContainer = new System.Windows.Forms.SplitContainer();
-            this.RButtonManual = new System.Windows.Forms.RadioButton();
-            this.RButtonAutomatic = new System.Windows.Forms.RadioButton();
-            this.ButtonStart = new System.Windows.Forms.Button();
             this.EditorRichTextBox = new System.Windows.Forms.RichTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.StatusPanel = new System.Windows.Forms.Panel();
-            this.splitContainer8 = new System.Windows.Forms.SplitContainer();
+            this.StartSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.RButtonManual = new System.Windows.Forms.RadioButton();
+            this.RButtonAutomatic = new System.Windows.Forms.RadioButton();
+            this.ButtonStart = new System.Windows.Forms.Button();
+            this.LabelTokenType = new System.Windows.Forms.Label();
+            this.LabelTokenStatus = new System.Windows.Forms.Label();
+            this.LabelTokenName = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.SContainerTraceOption = new System.Windows.Forms.SplitContainer();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.ButtonSkipAutomatic = new System.Windows.Forms.Button();
             this.RButton10 = new System.Windows.Forms.RadioButton();
@@ -49,15 +55,22 @@
             this.RButton60 = new System.Windows.Forms.RadioButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.splitContainer9 = new System.Windows.Forms.SplitContainer();
-            this.BottunNextLine = new System.Windows.Forms.Button();
+            this.ButtonNextLine = new System.Windows.Forms.Button();
             this.splitContainer10 = new System.Windows.Forms.SplitContainer();
             this.ButtonNextWord = new System.Windows.Forms.Button();
             this.ButtonSkipManual = new System.Windows.Forms.Button();
+            this.PanelResult = new System.Windows.Forms.Panel();
             this.ProgressBarResult = new System.Windows.Forms.ProgressBar();
+            this.ButtonResetApp = new System.Windows.Forms.Button();
+            this.ButtonExportToFile = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.label1 = new System.Windows.Forms.Label();
-            this.TokenTableListView = new System.Windows.Forms.ListView();
+            this.ListViewTokenTable = new System.Windows.Forms.ListView();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
@@ -70,19 +83,6 @@
             this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader8 = new System.Windows.Forms.ColumnHeader();
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.PanelResult = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.ButtonExportToFile = new System.Windows.Forms.Button();
-            this.ButtonResetApp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -91,10 +91,6 @@
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.StartSplitContainer)).BeginInit();
-            this.StartSplitContainer.Panel1.SuspendLayout();
-            this.StartSplitContainer.Panel2.SuspendLayout();
-            this.StartSplitContainer.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
             this.splitContainer6.Panel1.SuspendLayout();
@@ -106,10 +102,14 @@
             this.splitContainer7.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.StatusPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).BeginInit();
-            this.splitContainer8.Panel1.SuspendLayout();
-            this.splitContainer8.Panel2.SuspendLayout();
-            this.splitContainer8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StartSplitContainer)).BeginInit();
+            this.StartSplitContainer.Panel1.SuspendLayout();
+            this.StartSplitContainer.Panel2.SuspendLayout();
+            this.StartSplitContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SContainerTraceOption)).BeginInit();
+            this.SContainerTraceOption.Panel1.SuspendLayout();
+            this.SContainerTraceOption.Panel2.SuspendLayout();
+            this.SContainerTraceOption.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).BeginInit();
@@ -120,6 +120,7 @@
             this.splitContainer10.Panel1.SuspendLayout();
             this.splitContainer10.Panel2.SuspendLayout();
             this.splitContainer10.SuspendLayout();
+            this.PanelResult.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -133,7 +134,6 @@
             this.splitContainer5.Panel2.SuspendLayout();
             this.splitContainer5.SuspendLayout();
             this.MainPanel.SuspendLayout();
-            this.PanelResult.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -174,58 +174,6 @@
             this.splitContainer3.SplitterDistance = 500;
             this.splitContainer3.TabIndex = 0;
             // 
-            // StartSplitContainer
-            // 
-            this.StartSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.StartSplitContainer.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.StartSplitContainer.Location = new System.Drawing.Point(3, 19);
-            this.StartSplitContainer.Name = "StartSplitContainer";
-            // 
-            // StartSplitContainer.Panel1
-            // 
-            this.StartSplitContainer.Panel1.Controls.Add(this.RButtonManual);
-            this.StartSplitContainer.Panel1.Controls.Add(this.RButtonAutomatic);
-            // 
-            // StartSplitContainer.Panel2
-            // 
-            this.StartSplitContainer.Panel2.Controls.Add(this.ButtonStart);
-            this.StartSplitContainer.Size = new System.Drawing.Size(198, 48);
-            this.StartSplitContainer.SplitterDistance = 95;
-            this.StartSplitContainer.TabIndex = 0;
-            // 
-            // RButtonManual
-            // 
-            this.RButtonManual.AutoSize = true;
-            this.RButtonManual.Location = new System.Drawing.Point(3, 24);
-            this.RButtonManual.Name = "RButtonManual";
-            this.RButtonManual.Size = new System.Drawing.Size(65, 19);
-            this.RButtonManual.TabIndex = 0;
-            this.RButtonManual.TabStop = true;
-            this.RButtonManual.Text = "Manual";
-            this.RButtonManual.UseVisualStyleBackColor = true;
-            // 
-            // RButtonAutomatic
-            // 
-            this.RButtonAutomatic.AutoSize = true;
-            this.RButtonAutomatic.Location = new System.Drawing.Point(3, 3);
-            this.RButtonAutomatic.Name = "RButtonAutomatic";
-            this.RButtonAutomatic.Size = new System.Drawing.Size(81, 19);
-            this.RButtonAutomatic.TabIndex = 0;
-            this.RButtonAutomatic.TabStop = true;
-            this.RButtonAutomatic.Text = "Automatic";
-            this.RButtonAutomatic.UseVisualStyleBackColor = true;
-            // 
-            // ButtonStart
-            // 
-            this.ButtonStart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ButtonStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonStart.Location = new System.Drawing.Point(0, 0);
-            this.ButtonStart.Name = "ButtonStart";
-            this.ButtonStart.Size = new System.Drawing.Size(99, 48);
-            this.ButtonStart.TabIndex = 0;
-            this.ButtonStart.Text = "Start";
-            this.ButtonStart.UseVisualStyleBackColor = true;
-            // 
             // EditorRichTextBox
             // 
             this.EditorRichTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(237)))));
@@ -235,6 +183,7 @@
             this.EditorRichTextBox.Size = new System.Drawing.Size(619, 500);
             this.EditorRichTextBox.TabIndex = 0;
             this.EditorRichTextBox.Text = "";
+            this.EditorRichTextBox.WordWrap = false;
             // 
             // groupBox1
             // 
@@ -278,14 +227,13 @@
             // 
             // splitContainer7.Panel2
             // 
-            this.splitContainer7.Panel2.Controls.Add(this.splitContainer8);
+            this.splitContainer7.Panel2.Controls.Add(this.SContainerTraceOption);
             this.splitContainer7.Size = new System.Drawing.Size(613, 70);
             this.splitContainer7.SplitterDistance = 204;
             this.splitContainer7.TabIndex = 0;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.StartSplitContainer);
             this.groupBox2.Controls.Add(this.StatusPanel);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
@@ -297,9 +245,10 @@
             // 
             // StatusPanel
             // 
-            this.StatusPanel.Controls.Add(this.label8);
-            this.StatusPanel.Controls.Add(this.label6);
-            this.StatusPanel.Controls.Add(this.label4);
+            this.StatusPanel.Controls.Add(this.StartSplitContainer);
+            this.StatusPanel.Controls.Add(this.LabelTokenType);
+            this.StatusPanel.Controls.Add(this.LabelTokenStatus);
+            this.StatusPanel.Controls.Add(this.LabelTokenName);
             this.StatusPanel.Controls.Add(this.label7);
             this.StatusPanel.Controls.Add(this.label5);
             this.StatusPanel.Controls.Add(this.label3);
@@ -309,23 +258,130 @@
             this.StatusPanel.Size = new System.Drawing.Size(198, 48);
             this.StatusPanel.TabIndex = 0;
             // 
-            // splitContainer8
+            // StartSplitContainer
             // 
-            this.splitContainer8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer8.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer8.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer8.Name = "splitContainer8";
+            this.StartSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StartSplitContainer.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.StartSplitContainer.Location = new System.Drawing.Point(0, 0);
+            this.StartSplitContainer.Name = "StartSplitContainer";
             // 
-            // splitContainer8.Panel1
+            // StartSplitContainer.Panel1
             // 
-            this.splitContainer8.Panel1.Controls.Add(this.groupBox3);
+            this.StartSplitContainer.Panel1.Controls.Add(this.RButtonManual);
+            this.StartSplitContainer.Panel1.Controls.Add(this.RButtonAutomatic);
             // 
-            // splitContainer8.Panel2
+            // StartSplitContainer.Panel2
             // 
-            this.splitContainer8.Panel2.Controls.Add(this.groupBox4);
-            this.splitContainer8.Size = new System.Drawing.Size(405, 70);
-            this.splitContainer8.SplitterDistance = 201;
-            this.splitContainer8.TabIndex = 0;
+            this.StartSplitContainer.Panel2.Controls.Add(this.ButtonStart);
+            this.StartSplitContainer.Size = new System.Drawing.Size(198, 48);
+            this.StartSplitContainer.SplitterDistance = 95;
+            this.StartSplitContainer.TabIndex = 0;
+            // 
+            // RButtonManual
+            // 
+            this.RButtonManual.AutoSize = true;
+            this.RButtonManual.Location = new System.Drawing.Point(3, 24);
+            this.RButtonManual.Name = "RButtonManual";
+            this.RButtonManual.Size = new System.Drawing.Size(65, 19);
+            this.RButtonManual.TabIndex = 0;
+            this.RButtonManual.Text = "Manual";
+            this.RButtonManual.UseVisualStyleBackColor = true;
+            // 
+            // RButtonAutomatic
+            // 
+            this.RButtonAutomatic.AutoSize = true;
+            this.RButtonAutomatic.Checked = true;
+            this.RButtonAutomatic.Location = new System.Drawing.Point(3, 3);
+            this.RButtonAutomatic.Name = "RButtonAutomatic";
+            this.RButtonAutomatic.Size = new System.Drawing.Size(81, 19);
+            this.RButtonAutomatic.TabIndex = 0;
+            this.RButtonAutomatic.TabStop = true;
+            this.RButtonAutomatic.Text = "Automatic";
+            this.RButtonAutomatic.UseVisualStyleBackColor = true;
+            // 
+            // ButtonStart
+            // 
+            this.ButtonStart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ButtonStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonStart.Location = new System.Drawing.Point(0, 0);
+            this.ButtonStart.Name = "ButtonStart";
+            this.ButtonStart.Size = new System.Drawing.Size(99, 48);
+            this.ButtonStart.TabIndex = 0;
+            this.ButtonStart.Text = "Start";
+            this.ButtonStart.UseVisualStyleBackColor = true;
+            this.ButtonStart.Click += new System.EventHandler(this.ButtonStart_Click);
+            // 
+            // LabelTokenType
+            // 
+            this.LabelTokenType.AutoSize = true;
+            this.LabelTokenType.Location = new System.Drawing.Point(138, 26);
+            this.LabelTokenType.Name = "LabelTokenType";
+            this.LabelTokenType.Size = new System.Drawing.Size(47, 15);
+            this.LabelTokenType.TabIndex = 0;
+            this.LabelTokenType.Text = "<Type>";
+            // 
+            // LabelTokenStatus
+            // 
+            this.LabelTokenStatus.AutoSize = true;
+            this.LabelTokenStatus.Location = new System.Drawing.Point(42, 26);
+            this.LabelTokenStatus.Name = "LabelTokenStatus";
+            this.LabelTokenStatus.Size = new System.Drawing.Size(55, 15);
+            this.LabelTokenStatus.TabIndex = 0;
+            this.LabelTokenStatus.Text = "<Status>";
+            // 
+            // LabelTokenName
+            // 
+            this.LabelTokenName.AutoSize = true;
+            this.LabelTokenName.Location = new System.Drawing.Point(42, 5);
+            this.LabelTokenName.Name = "LabelTokenName";
+            this.LabelTokenName.Size = new System.Drawing.Size(89, 15);
+            this.LabelTokenName.TabIndex = 0;
+            this.LabelTokenName.Text = "<Token Name>";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(104, 26);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(34, 15);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Type:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 26);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(42, 15);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Status:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 5);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 15);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Token:";
+            // 
+            // SContainerTraceOption
+            // 
+            this.SContainerTraceOption.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SContainerTraceOption.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.SContainerTraceOption.Location = new System.Drawing.Point(0, 0);
+            this.SContainerTraceOption.Name = "SContainerTraceOption";
+            // 
+            // SContainerTraceOption.Panel1
+            // 
+            this.SContainerTraceOption.Panel1.Controls.Add(this.groupBox3);
+            // 
+            // SContainerTraceOption.Panel2
+            // 
+            this.SContainerTraceOption.Panel2.Controls.Add(this.groupBox4);
+            this.SContainerTraceOption.Size = new System.Drawing.Size(405, 70);
+            this.SContainerTraceOption.SplitterDistance = 201;
+            this.SContainerTraceOption.TabIndex = 0;
             // 
             // groupBox3
             // 
@@ -414,7 +470,7 @@
             // 
             // splitContainer9.Panel1
             // 
-            this.splitContainer9.Panel1.Controls.Add(this.BottunNextLine);
+            this.splitContainer9.Panel1.Controls.Add(this.ButtonNextLine);
             // 
             // splitContainer9.Panel2
             // 
@@ -423,16 +479,18 @@
             this.splitContainer9.SplitterDistance = 63;
             this.splitContainer9.TabIndex = 2;
             // 
-            // BottunNextLine
+            // ButtonNextLine
             // 
-            this.BottunNextLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(237)))));
-            this.BottunNextLine.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BottunNextLine.Location = new System.Drawing.Point(0, 0);
-            this.BottunNextLine.Name = "BottunNextLine";
-            this.BottunNextLine.Size = new System.Drawing.Size(63, 48);
-            this.BottunNextLine.TabIndex = 0;
-            this.BottunNextLine.Text = "Next Line";
-            this.BottunNextLine.UseVisualStyleBackColor = false;
+            this.ButtonNextLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(237)))));
+            this.ButtonNextLine.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ButtonNextLine.Enabled = false;
+            this.ButtonNextLine.Location = new System.Drawing.Point(0, 0);
+            this.ButtonNextLine.Name = "ButtonNextLine";
+            this.ButtonNextLine.Size = new System.Drawing.Size(63, 48);
+            this.ButtonNextLine.TabIndex = 0;
+            this.ButtonNextLine.Text = "Next Line";
+            this.ButtonNextLine.UseVisualStyleBackColor = false;
+            this.ButtonNextLine.Click += new System.EventHandler(this.ButtonNextLine_Click);
             // 
             // splitContainer10
             // 
@@ -455,23 +513,42 @@
             // 
             this.ButtonNextWord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(237)))));
             this.ButtonNextWord.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ButtonNextWord.Enabled = false;
             this.ButtonNextWord.Location = new System.Drawing.Point(0, 0);
             this.ButtonNextWord.Name = "ButtonNextWord";
             this.ButtonNextWord.Size = new System.Drawing.Size(64, 48);
             this.ButtonNextWord.TabIndex = 0;
             this.ButtonNextWord.Text = "Next Word";
             this.ButtonNextWord.UseVisualStyleBackColor = false;
+            this.ButtonNextWord.Click += new System.EventHandler(this.ButtonNextWord_Click);
             // 
             // ButtonSkipManual
             // 
             this.ButtonSkipManual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(237)))));
             this.ButtonSkipManual.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ButtonSkipManual.Enabled = false;
             this.ButtonSkipManual.Location = new System.Drawing.Point(0, 0);
             this.ButtonSkipManual.Name = "ButtonSkipManual";
             this.ButtonSkipManual.Size = new System.Drawing.Size(59, 48);
             this.ButtonSkipManual.TabIndex = 0;
             this.ButtonSkipManual.Text = "Skip";
             this.ButtonSkipManual.UseVisualStyleBackColor = false;
+            this.ButtonSkipManual.Click += new System.EventHandler(this.ButtonSkipManual_Click);
+            // 
+            // PanelResult
+            // 
+            this.PanelResult.Controls.Add(this.ProgressBarResult);
+            this.PanelResult.Controls.Add(this.ButtonResetApp);
+            this.PanelResult.Controls.Add(this.ButtonExportToFile);
+            this.PanelResult.Controls.Add(this.label12);
+            this.PanelResult.Controls.Add(this.label11);
+            this.PanelResult.Controls.Add(this.label10);
+            this.PanelResult.Controls.Add(this.label9);
+            this.PanelResult.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelResult.Location = new System.Drawing.Point(0, 0);
+            this.PanelResult.Name = "PanelResult";
+            this.PanelResult.Size = new System.Drawing.Size(613, 25);
+            this.PanelResult.TabIndex = 0;
             // 
             // ProgressBarResult
             // 
@@ -480,6 +557,64 @@
             this.ProgressBarResult.Name = "ProgressBarResult";
             this.ProgressBarResult.Size = new System.Drawing.Size(613, 25);
             this.ProgressBarResult.TabIndex = 0;
+            // 
+            // ButtonResetApp
+            // 
+            this.ButtonResetApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonResetApp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(237)))));
+            this.ButtonResetApp.Location = new System.Drawing.Point(355, 1);
+            this.ButtonResetApp.Name = "ButtonResetApp";
+            this.ButtonResetApp.Size = new System.Drawing.Size(124, 23);
+            this.ButtonResetApp.TabIndex = 1;
+            this.ButtonResetApp.Text = "Reset Application";
+            this.ButtonResetApp.UseVisualStyleBackColor = false;
+            // 
+            // ButtonExportToFile
+            // 
+            this.ButtonExportToFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonExportToFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(237)))));
+            this.ButtonExportToFile.Location = new System.Drawing.Point(483, 1);
+            this.ButtonExportToFile.Name = "ButtonExportToFile";
+            this.ButtonExportToFile.Size = new System.Drawing.Size(124, 23);
+            this.ButtonExportToFile.TabIndex = 1;
+            this.ButtonExportToFile.Text = "Export to File";
+            this.ButtonExportToFile.UseVisualStyleBackColor = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(185, 5);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(48, 15);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "<num>";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(139, 5);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(40, 15);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Errors:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(75, 5);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(48, 15);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "<num>";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 5);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(63, 15);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "All Tokens:";
             // 
             // splitContainer2
             // 
@@ -514,7 +649,7 @@
             // 
             // splitContainer4.Panel2
             // 
-            this.splitContainer4.Panel2.Controls.Add(this.TokenTableListView);
+            this.splitContainer4.Panel2.Controls.Add(this.ListViewTokenTable);
             this.splitContainer4.Size = new System.Drawing.Size(284, 625);
             this.splitContainer4.SplitterDistance = 27;
             this.splitContainer4.TabIndex = 0;
@@ -528,21 +663,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Token Table:";
             // 
-            // TokenTableListView
+            // ListViewTokenTable
             // 
-            this.TokenTableListView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(237)))));
-            this.TokenTableListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ListViewTokenTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(237)))));
+            this.ListViewTokenTable.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
-            this.TokenTableListView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TokenTableListView.Location = new System.Drawing.Point(0, 0);
-            this.TokenTableListView.Name = "TokenTableListView";
-            this.TokenTableListView.Size = new System.Drawing.Size(284, 594);
-            this.TokenTableListView.TabIndex = 0;
-            this.TokenTableListView.UseCompatibleStateImageBehavior = false;
-            this.TokenTableListView.View = System.Windows.Forms.View.Details;
+            this.ListViewTokenTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ListViewTokenTable.Location = new System.Drawing.Point(0, 0);
+            this.ListViewTokenTable.Name = "ListViewTokenTable";
+            this.ListViewTokenTable.Size = new System.Drawing.Size(284, 594);
+            this.ListViewTokenTable.TabIndex = 0;
+            this.ListViewTokenTable.UseCompatibleStateImageBehavior = false;
+            this.ListViewTokenTable.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -637,133 +772,6 @@
             this.MainPanel.Size = new System.Drawing.Size(1179, 625);
             this.MainPanel.TabIndex = 1;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 5);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 15);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Token:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(42, 5);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 15);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "<Token Name>";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 26);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 15);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Status:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(42, 26);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 15);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "<Status>";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(104, 26);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(34, 15);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Type:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(138, 26);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 15);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "<Type>";
-            // 
-            // PanelResult
-            // 
-            this.PanelResult.Controls.Add(this.ProgressBarResult);
-            this.PanelResult.Controls.Add(this.ButtonResetApp);
-            this.PanelResult.Controls.Add(this.ButtonExportToFile);
-            this.PanelResult.Controls.Add(this.label12);
-            this.PanelResult.Controls.Add(this.label11);
-            this.PanelResult.Controls.Add(this.label10);
-            this.PanelResult.Controls.Add(this.label9);
-            this.PanelResult.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelResult.Location = new System.Drawing.Point(0, 0);
-            this.PanelResult.Name = "PanelResult";
-            this.PanelResult.Size = new System.Drawing.Size(613, 25);
-            this.PanelResult.TabIndex = 0;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 5);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(63, 15);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "All Tokens:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(75, 5);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(48, 15);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "<num>";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(139, 5);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(40, 15);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Errors:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(185, 5);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(48, 15);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "<num>";
-            // 
-            // ButtonExportToFile
-            // 
-            this.ButtonExportToFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonExportToFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(237)))));
-            this.ButtonExportToFile.Location = new System.Drawing.Point(483, 1);
-            this.ButtonExportToFile.Name = "ButtonExportToFile";
-            this.ButtonExportToFile.Size = new System.Drawing.Size(124, 23);
-            this.ButtonExportToFile.TabIndex = 1;
-            this.ButtonExportToFile.Text = "Export to File";
-            this.ButtonExportToFile.UseVisualStyleBackColor = false;
-            // 
-            // ButtonResetApp
-            // 
-            this.ButtonResetApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonResetApp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(237)))));
-            this.ButtonResetApp.Location = new System.Drawing.Point(355, 1);
-            this.ButtonResetApp.Name = "ButtonResetApp";
-            this.ButtonResetApp.Size = new System.Drawing.Size(124, 23);
-            this.ButtonResetApp.TabIndex = 1;
-            this.ButtonResetApp.Text = "Reset Application";
-            this.ButtonResetApp.UseVisualStyleBackColor = false;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -781,11 +789,6 @@
             this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
-            this.StartSplitContainer.Panel1.ResumeLayout(false);
-            this.StartSplitContainer.Panel1.PerformLayout();
-            this.StartSplitContainer.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.StartSplitContainer)).EndInit();
-            this.StartSplitContainer.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.splitContainer6.Panel1.ResumeLayout(false);
             this.splitContainer6.Panel2.ResumeLayout(false);
@@ -798,10 +801,15 @@
             this.groupBox2.ResumeLayout(false);
             this.StatusPanel.ResumeLayout(false);
             this.StatusPanel.PerformLayout();
-            this.splitContainer8.Panel1.ResumeLayout(false);
-            this.splitContainer8.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).EndInit();
-            this.splitContainer8.ResumeLayout(false);
+            this.StartSplitContainer.Panel1.ResumeLayout(false);
+            this.StartSplitContainer.Panel1.PerformLayout();
+            this.StartSplitContainer.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.StartSplitContainer)).EndInit();
+            this.StartSplitContainer.ResumeLayout(false);
+            this.SContainerTraceOption.Panel1.ResumeLayout(false);
+            this.SContainerTraceOption.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SContainerTraceOption)).EndInit();
+            this.SContainerTraceOption.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -813,6 +821,8 @@
             this.splitContainer10.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).EndInit();
             this.splitContainer10.ResumeLayout(false);
+            this.PanelResult.ResumeLayout(false);
+            this.PanelResult.PerformLayout();
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
@@ -828,8 +838,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
             this.splitContainer5.ResumeLayout(false);
             this.MainPanel.ResumeLayout(false);
-            this.PanelResult.ResumeLayout(false);
-            this.PanelResult.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -841,7 +849,7 @@
         private RichTextBox EditorRichTextBox;
         private SplitContainer splitContainer2;
         private SplitContainer splitContainer4;
-        private ListView TokenTableListView;
+        private ListView ListViewTokenTable;
         private ColumnHeader columnHeader1;
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader3;
@@ -860,11 +868,11 @@
         private SplitContainer splitContainer6;
         private SplitContainer splitContainer7;
         private GroupBox groupBox2;
-        private SplitContainer splitContainer8;
+        private SplitContainer SContainerTraceOption;
         private GroupBox groupBox3;
         private GroupBox groupBox4;
         private SplitContainer splitContainer9;
-        private Button BottunNextLine;
+        private Button ButtonNextLine;
         private SplitContainer splitContainer10;
         private Button ButtonNextWord;
         private Button ButtonSkipManual;
@@ -878,9 +886,9 @@
         private Button ButtonStart;
         private Button ButtonSkipAutomatic;
         private Panel StatusPanel;
-        private Label label8;
-        private Label label6;
-        private Label label4;
+        private Label LabelTokenType;
+        private Label LabelTokenStatus;
+        private Label LabelTokenName;
         private Label label7;
         private Label label5;
         private Label label3;
