@@ -156,6 +156,11 @@ public partial class MainForm : Form
         {
             MessageBox.Show("End of code");
             HighLightErrors(); 
+            ProgressBarResult.Visible = false;
+
+            ButtonNextWord.Enabled = false;
+            ButtonNextLine.Enabled = false;
+            ButtonSkipManual.Enabled = false;
 
             return;
         }
@@ -223,5 +228,46 @@ public partial class MainForm : Form
         {
             Parse();
         } while (column < EditorRichTextBox.TextLength);
+        Parse();
+    }
+
+    private void ButtonRebuild_Click(object sender, EventArgs e)
+    {
+
+        EditorRichTextBox.SelectAll();
+        EditorRichTextBox.SelectionBackColor = EditorRichTextBox.BackColor;
+
+        SContainerTraceOption.Panel1Collapsed = false;
+        SContainerTraceOption.Panel2Collapsed = false;
+
+        line = 0;
+        column = 0;
+
+        StartSplitContainer.Visible = true;
+
+        tokens.Clear();
+
+        ListViewErrorTable.Items.Clear();
+        ListViewTokenTable.Items.Clear();
+
+        ProgressBarResult.Visible = true;
+        ProgressBarResult.Value = 0;
+    }
+
+    private void ButtonExportToFile_Click(object sender, EventArgs e)
+    {
+        FolderBrowserDialog dlg = new FolderBrowserDialog();
+        dlg.ShowDialog();
+        var path = Path.Join(dlg.SelectedPath, "Tokens.txt");
+        using (StreamWriter sw = File.CreateText(path))
+        {
+            sw.WriteLine("Correct Tokens:");
+            sw.WriteLine("Token         Status        Line        Column");    
+            foreach (var item in tokens.Where(u=>u.Status == TokenStatus.Correct))
+            {
+                sw.WriteLine($"{item.Name}         {item.Status}         {item.Line}         {item.Column}");
+            }
+        }
+        MessageBox.Show($"Exported to {path}");
     }
 }

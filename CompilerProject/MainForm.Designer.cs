@@ -60,13 +60,13 @@
             this.ButtonNextWord = new System.Windows.Forms.Button();
             this.ButtonSkipManual = new System.Windows.Forms.Button();
             this.PanelResult = new System.Windows.Forms.Panel();
-            this.ProgressBarResult = new System.Windows.Forms.ProgressBar();
-            this.ButtonResetApp = new System.Windows.Forms.Button();
+            this.ButtonRebuild = new System.Windows.Forms.Button();
             this.ButtonExportToFile = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
+            this.LabelErrors = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.LebelAllTokens = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.ProgressBarResult = new System.Windows.Forms.ProgressBar();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.label1 = new System.Windows.Forms.Label();
@@ -280,22 +280,22 @@
             // RButtonManual
             // 
             this.RButtonManual.AutoSize = true;
+            this.RButtonManual.Checked = true;
             this.RButtonManual.Location = new System.Drawing.Point(3, 24);
             this.RButtonManual.Name = "RButtonManual";
             this.RButtonManual.Size = new System.Drawing.Size(65, 19);
             this.RButtonManual.TabIndex = 0;
+            this.RButtonManual.TabStop = true;
             this.RButtonManual.Text = "Manual";
             this.RButtonManual.UseVisualStyleBackColor = true;
             // 
             // RButtonAutomatic
             // 
             this.RButtonAutomatic.AutoSize = true;
-            this.RButtonAutomatic.Checked = true;
             this.RButtonAutomatic.Location = new System.Drawing.Point(3, 3);
             this.RButtonAutomatic.Name = "RButtonAutomatic";
             this.RButtonAutomatic.Size = new System.Drawing.Size(81, 19);
             this.RButtonAutomatic.TabIndex = 0;
-            this.RButtonAutomatic.TabStop = true;
             this.RButtonAutomatic.Text = "Automatic";
             this.RButtonAutomatic.UseVisualStyleBackColor = true;
             // 
@@ -538,11 +538,11 @@
             // PanelResult
             // 
             this.PanelResult.Controls.Add(this.ProgressBarResult);
-            this.PanelResult.Controls.Add(this.ButtonResetApp);
+            this.PanelResult.Controls.Add(this.ButtonRebuild);
             this.PanelResult.Controls.Add(this.ButtonExportToFile);
-            this.PanelResult.Controls.Add(this.label12);
+            this.PanelResult.Controls.Add(this.LabelErrors);
             this.PanelResult.Controls.Add(this.label11);
-            this.PanelResult.Controls.Add(this.label10);
+            this.PanelResult.Controls.Add(this.LebelAllTokens);
             this.PanelResult.Controls.Add(this.label9);
             this.PanelResult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelResult.Location = new System.Drawing.Point(0, 0);
@@ -550,24 +550,17 @@
             this.PanelResult.Size = new System.Drawing.Size(613, 25);
             this.PanelResult.TabIndex = 0;
             // 
-            // ProgressBarResult
+            // ButtonRebuild
             // 
-            this.ProgressBarResult.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ProgressBarResult.Location = new System.Drawing.Point(0, 0);
-            this.ProgressBarResult.Name = "ProgressBarResult";
-            this.ProgressBarResult.Size = new System.Drawing.Size(613, 25);
-            this.ProgressBarResult.TabIndex = 0;
-            // 
-            // ButtonResetApp
-            // 
-            this.ButtonResetApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonResetApp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(237)))));
-            this.ButtonResetApp.Location = new System.Drawing.Point(355, 1);
-            this.ButtonResetApp.Name = "ButtonResetApp";
-            this.ButtonResetApp.Size = new System.Drawing.Size(124, 23);
-            this.ButtonResetApp.TabIndex = 1;
-            this.ButtonResetApp.Text = "Reset Application";
-            this.ButtonResetApp.UseVisualStyleBackColor = false;
+            this.ButtonRebuild.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonRebuild.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(237)))));
+            this.ButtonRebuild.Location = new System.Drawing.Point(355, 1);
+            this.ButtonRebuild.Name = "ButtonRebuild";
+            this.ButtonRebuild.Size = new System.Drawing.Size(124, 23);
+            this.ButtonRebuild.TabIndex = 1;
+            this.ButtonRebuild.Text = "Rebuild";
+            this.ButtonRebuild.UseVisualStyleBackColor = false;
+            this.ButtonRebuild.Click += new System.EventHandler(this.ButtonRebuild_Click);
             // 
             // ButtonExportToFile
             // 
@@ -579,15 +572,16 @@
             this.ButtonExportToFile.TabIndex = 1;
             this.ButtonExportToFile.Text = "Export to File";
             this.ButtonExportToFile.UseVisualStyleBackColor = false;
+            this.ButtonExportToFile.Click += new System.EventHandler(this.ButtonExportToFile_Click);
             // 
-            // label12
+            // LabelErrors
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(185, 5);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(48, 15);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "<num>";
+            this.LabelErrors.AutoSize = true;
+            this.LabelErrors.Location = new System.Drawing.Point(185, 5);
+            this.LabelErrors.Name = "LabelErrors";
+            this.LabelErrors.Size = new System.Drawing.Size(48, 15);
+            this.LabelErrors.TabIndex = 0;
+            this.LabelErrors.Text = "<num>";
             // 
             // label11
             // 
@@ -598,14 +592,14 @@
             this.label11.TabIndex = 0;
             this.label11.Text = "Errors:";
             // 
-            // label10
+            // LebelAllTokens
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(75, 5);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(48, 15);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "<num>";
+            this.LebelAllTokens.AutoSize = true;
+            this.LebelAllTokens.Location = new System.Drawing.Point(75, 5);
+            this.LebelAllTokens.Name = "LebelAllTokens";
+            this.LebelAllTokens.Size = new System.Drawing.Size(48, 15);
+            this.LebelAllTokens.TabIndex = 0;
+            this.LebelAllTokens.Text = "<num>";
             // 
             // label9
             // 
@@ -615,6 +609,14 @@
             this.label9.Size = new System.Drawing.Size(63, 15);
             this.label9.TabIndex = 0;
             this.label9.Text = "All Tokens:";
+            // 
+            // ProgressBarResult
+            // 
+            this.ProgressBarResult.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ProgressBarResult.Location = new System.Drawing.Point(0, 0);
+            this.ProgressBarResult.Name = "ProgressBarResult";
+            this.ProgressBarResult.Size = new System.Drawing.Size(613, 25);
+            this.ProgressBarResult.TabIndex = 0;
             // 
             // splitContainer2
             // 
@@ -893,11 +895,11 @@
         private Label label5;
         private Label label3;
         private Panel PanelResult;
-        private Button ButtonResetApp;
+        private Button ButtonRebuild;
         private Button ButtonExportToFile;
-        private Label label12;
+        private Label LabelErrors;
         private Label label11;
-        private Label label10;
+        private Label LebelAllTokens;
         private Label label9;
     }
 }
